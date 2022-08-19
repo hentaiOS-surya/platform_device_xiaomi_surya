@@ -20,3 +20,10 @@ install_symlink {
     installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
     symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
+
+cc_library_shared {
+    name: "libpiex_shim",
+    shared_libs: ["libpiex"],
+    srcs: ["libpiex/piex_shim.cpp"],
+    vendor: true,
+}
