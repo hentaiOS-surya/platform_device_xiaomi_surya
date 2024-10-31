@@ -106,12 +106,6 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
-# Malloc
-MALLOC_SVELTE := true
-
 # Media
 TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
