@@ -298,6 +298,7 @@ PRODUCT_COPY_FILES += \
 
 # Network
 PRODUCT_PACKAGES += \
+    libcrypto_shim \
     libnetutils.vendor \
     android.system.net.netd@1.1.vendor
 
