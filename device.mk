@@ -23,9 +23,6 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# XiaomiParts
-$(call inherit-product, device/xiaomi/surya/parts/parts.mk)
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
@@ -162,11 +159,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-# FM
-PRODUCT_PACKAGES += \
-    FM2 \
-    qcom.fmradio
-
 # Fstab
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
@@ -260,14 +252,6 @@ PRODUCT_PACKAGES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
-
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.surya
 
 # Media
 PRODUCT_PACKAGES += \
@@ -442,12 +426,10 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
-    telephony-ext \
-    xiaomi-telephony-stub
+    telephony-ext
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
-    xiaomi-telephony-stub
+    telephony-ext
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \

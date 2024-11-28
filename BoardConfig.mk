@@ -46,8 +46,6 @@ TARGET_PROVIDES_AUDIO_EXTNS := true
 TARGET_BOOTLOADER_BOARD_NAME := sm6150
 TARGET_NO_BOOTLOADER := true
 
-# Camera
-TARGET_CAMERA_OVERRIDE_FORMAT_FROM_RESERVED := true
 MALLOC_SVELTE := true
 MALLOC_SVELTE_FOR_LIBC32 := true
 
@@ -80,10 +78,6 @@ ODM_MANIFEST_SURYA_FILES := $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
 
-# Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_surya
-TARGET_RECOVERY_DEVICE_MODULES := libinit_surya
-
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
@@ -105,12 +99,6 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += cgroup_disable=pressure
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
-
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
-# Malloc
-MALLOC_SVELTE := true
 
 # Media
 TARGET_USES_ION := true
